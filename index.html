@@ -1,83 +1,56 @@
 <!DOCTYPE html>
-
-
 <html>
-
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Association</title>
+    <title> menu </title>
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="menu.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ffffff;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        main {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .tab-button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            margin: 0 5px;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        footer {
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-   
+    
+    <div class="header">
+        
+        <nav>
+            <div class="logo">
+        <a href="#"><img src="soc.jpg"></a>
+    </div>
+            <ul class="menu">
+
+                <li><a href ="base.html">Acceuil</a></li>
+                <li><a href ="projets.html">Projects</a></li>
+                <li><a href ="qui_sommes_nous.html">qui_sommes_nous</a></li>
+                <li><a href ="#">contact</a></li>
+                 
+            </ul>
+            <form id="search-form">
+                <input type="search" name="q" placeholder="recherche">
+                <button type="button" onclick="openTab('recherche')">Search</button>
+            </form>
+        </nav>
+        
+    </div>
+
     <div class="container">
         <header>
-            <h1 style="color: #4CAF50;">association IDALI pour le développement et la culture</h1>
+            <h1 style="color: #4CAF50;">Association IDALI pour le développement et la culture</h1>
         </header>
         <nav>
             <!-- Ajoutez ici vos liens de navigation vers d'autres pages si nécessaire -->
         </nav>
         <main>
             <h2>À propos de notre association</h2>
-            <p>Notre association a été fondée en 20XX dans le but de...</p>
+            <p>L'Association IDALI, fondée en 2017, incarne un engagement résolu en faveur du développement culturel et social. Notre mission est ancrée dans la valorisation et la promotion de la culture locale, ainsi que dans la mise en œuvre de projets qui contribuent au progrès de la société.
+
+Depuis notre création, nous nous sommes engagés à élargir les horizons de la culture, en offrant un espace de créativité et de partage pour les membres de notre communauté. Notre action s'étend également au développement social, visant à améliorer les conditions de vie de nos concitoyens.
+
+Située au cœur de Dowar Agjgal, un lieu emblématique du patrimoine de Tighdouine Alhaouz, notre association trouve son inspiration dans la richesse historique et culturelle de cette région. Nous nous efforçons de perpétuer les traditions locales tout en encourageant l'innovation et l'épanouissement individuel.
+
+Que ce soit à travers des événements culturels, des projets sociaux ou des initiatives de développement, l'Association IDALI demeure un acteur passionné et engagé dans la création d'un avenir meilleur pour notre communauté et notre patrimoine collectif..</p>
+            <img src="E:/Association/Image_dowar/test.jpg" alt="Desktop" style="display: block; margin: 0 auto;">
 
             <h2>Notre mission</h2>
             <p>La mission de notre association est de...</p>
-
+  
             <h2>Nos activités</h2>
             <ul>
                 <li>Activité 1</li>
@@ -101,7 +74,7 @@
 
 
             <ul>
-                <li><a href="{% url 'base' %}">Accueil</a></li>
+                <li><a href="{% url 'accueil' %}">Accueil</a></li>
                 <li><a href="{% url 'projets' %}">Projets</a></li>
                 <li><a href="{% url 'qui_sommes_nous' %}">Qui Sommes Nous</a></li>
             </ul>
@@ -127,45 +100,72 @@
         </section>
         <!-- Fin des onglets -->
 
-    
-
+        <footer>
+            <p>Contact : contact@monassociation.com</p>
+        </footer>
+        <li>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+                    
+        </li>
+    </div>
+ 
 <script>
     function openTab(tabName) {
-        var i, tabContent;
-        tabContent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabContent.length; i++) {
-            tabContent[i].style.display = "none";
-        }
-        document.getElementById(tabName).style.display = "block";
-
-        // Make AJAX request to fetch data from the Flask backend
-        fetch(`http://127.0.0.1:5000/${tabName}`)
+    var i, tabContent;
+    tabContent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
+    }
+    document.getElementById(tabName).style.display = "block";
+    
+    if (tabName === 'recherche') {
+        const searchQuery = document.querySelector('input[name="q"]').value;
+        
+        // Make an AJAX request to the backend for search results
+        fetch(`/search?q=${searchQuery}`)
             .then(response => response.json())
             .then(data => {
-                // Update the webpage with the fetched data
-                if (tabName === 'association') {
-                    // Update content for association section
-                    document.getElementById('association-content').textContent = data.name;
-                    // Update other elements in the section as needed
-                } else if (tabName === 'activites') {
-                    // Update content for activities section
-                    // ...
-                } else if (tabName === 'evenements') {
-                    // Update content for events section
-                    // ...
-                }
+                // Update content based on search results
+                const searchResultsContainer = document.getElementById('search-results');
+                searchResultsContainer.innerHTML = ''; // Clear previous results
+                
+                data.forEach(result => {
+                    const resultItem = document.createElement('div');
+                    resultItem.textContent = result.title; // Adjust based on your data structure
+                    searchResultsContainer.appendChild(resultItem);
+                });
             })
-            .catch(error => console.error('Error fetching data:', error));
+            .catch(error => console.error('Error fetching search results:', error));
     }
+}
+
 </script>
-    
-    </div>
-    <footer class="footer">
+ <footer class="footer">
+    <div class="contact-info">
         <div class="container">
             <p>Contact : contact@monassociation.com</p>
             <p>Adresse : Dowar Agjgal, Tighdouine Alhaouz</p>
+            <p>Téléphone : +212654-66-89-55</p>
         </div>
-    </footer>
+    </div>
+    <div class="contact-form">
+        <div class="container">
+            <h3>Contactez-nous</h3>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Nom">
+                <input type="email" name="email" placeholder="Email">
+                <textarea name="message" placeholder="Message"></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </div>
+    <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        
+    </div>
+</footer>
 
 </body>
 </html>
