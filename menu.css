@@ -1,113 +1,148 @@
-body {
-    margin: 0px;
-    padding: 0px;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-}
+body{
+	margin: 0px;
+	padding: 0px;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
 
-.header {
-    background-color: #287265;
-    height: 110px;
-    margin: 10px;
-    position: fixed;
-    top: 0;
+}
+.header{
+	background-color:#287265 ;
+	height: 110px;
+	margin: 10px;
+	position: fixed;
+	top: 0;
     width: 100%;
     text-align: center;
-    display: flex;
-    justify-content: space-between;
+     display: flex; /* Ajoutez cette ligne */
+    justify-content: space-between; /* Ajoutez cette ligne pour espacer les éléments sur la ligne */
 }
 
-.logo img {
-    background-color: #287265;
+.logo img{
+    background-color:#287265;
     position: absolute;
     margin: 0 auto;
-    width: 150px; /* Ajustez la largeur à la largeur réelle de votre logo */
-    height: auto; /* Cela maintient le rapport hauteur-largeur du logo */
+    width: 150px; /* Adjust the width to the actual width of your logo */
+    height: auto; /* This maintains the aspect ratio of the logo */
     left: 0px;
     top: 0px;
 }
 
 /* || typography */
+
 h1, h2, h3 {
-    font-family: 'Sonsie One', cursive;
-    color: #2a2a2a;
+  font-family: 'Sonsie One', cursive;
+  color: #2a2a2a;
 }
 
-p, li {
-    font-size: 1.6rem;
-    line-height: 1.5;
+
+p,li {
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
-nav ul li {
-    list-style-type: none;
-    display: inline-block;
+nav ul li{
+	 ;
+	list-style-type: none;
+	display: inline-block;
+		
 }
+ul li a{
+	font-size: 1.20em;
+	color:#fff ;
+	letter-spacing: 0.1rem;
+	padding-right: 10px;
 
-ul li a {
-    font-size: 1.20em;
-    color: #fff;
-    letter-spacing: 0.1rem;
-    padding-right: 10px;
+
 }
-
-ul li a:hover {
-    color: #ffd358;
-    background: gray;
-    text-decoration: underline;
+ul li a:hover{
+	color: #ffd358;
+	b&background: gray;
+	text-decoration:underline ;
 }
+.menu li{
+	
+	float: left;
+	padding: 5px;
+	margin-right:-60px;
 
-.menu li {
-    float: left;
-    padding: 5px;
-    margin-right: -60px;
 }
+.menu li a{
+	text-decoration: none;
+	margin-left: 120px;/**/
 
-.menu li a {
-    text-decoration: none;
-    margin-left: 120px; /* Ajoutez la marge désirée ici */
 }
-
-form {
-    padding-left: 1050px;
-    text-align: center;
-    display: flex;
-    align-items: center;
+form{
+	/*padding:35px ;
+	text-align: right;
+	height: 20px;*/
+	padding-left: 1050px;
+	/*padding-bottom: 200px;*/
+	text-align: center;
+	display: flex;
+    align-items: center; /* Centre verticalement les éléments */
 }
+input[type="search"]{
+	font-size: 17px;
+	/*padding: 5px;*/
 
-input[type="search"] {
-    font-size: 17px;
 }
 
 .container {
-    max-width: 800px;
-    margin: 90px auto 30px;
-    padding: 10px;
-    background-color: #ffffff;
-}
-
+        max-width: 800px;
+        margin: 90px auto 30px;
+        padding: 10px;
+        background-color: #ffffff;
+    }
+/*
 .footer {
+    /*background-color: #287265; /* Utilisez la même couleur que le menu */
+    /*position: fixed;
+    bottom: 0;
+    max-width: 800px;
+    width: 100%;
+    padding: 10px;
+    /*padding: 300px;
+    margin-top: 100px;
+    font-size: 20px;
+    text-align: center;
+}
+/*
+.footer p {
+	background-color: #287265;
+    margin: 10px;
+    color: #fff; /* Utilisez la même couleur de texte que le menu 
+    font-size: 20px;
+    text-align: center;
+}
+*/
+.footer {
+    /* Keep the existing styling */
+    /*border-top: 1px dashed #000;*/ pour separer avec uneline 
     margin-top: 0px;
     flex-shrink: 0;
+    /* Add these lines to display the two sections side by side */
     display: flex;
     justify-content: space-between;
     height: 360px;
-    padding: 0;
-    margin: 0;
+   padding: 0;
+   margin: 0;
     width: 100%;
-    left: 0px;
-    bottom: 0px;
+	left: 0px;
+	botttom: 0px;
+	
 }
 
-.contact-info,
-.contact-form {
+.contact-info, .contact-form {
+    /* Adjust the styling for the two sections */
     background-color: #287265;
-    padding: -5px; /* Je suppose que vous vouliez dire 5px ici */
-    color: #fff;
+    padding: -5px;
+    color: #287265;
     bottom: 0px;
 }
 
 .contact-form {
-    flex-grow: 1;
+    /* Adjust the styling for the contact form section */
+    flex-grow: 1; /* Allow this section to expand to fill available space */
     padding: 10px;
 }
 
