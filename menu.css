@@ -59,12 +59,14 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .logo img {
     background-color: #287265;
     width: 80px; /* Ajustez la largeur de l'image du logo */
     height: auto; /* Cela maintient le rapport hauteur-largeur du logo */
+    max-height: 100px; /* S'assurer que l'image n'est pas plus haute que le header */
 }
 
 nav ul {
@@ -73,6 +75,7 @@ nav ul {
     list-style: none;
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
 nav ul li {
