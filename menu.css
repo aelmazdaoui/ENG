@@ -1,30 +1,30 @@
-/* Global styles */
-.container {
-    max-width: 800px;
-    margin: 140px auto 30px;
-    padding: 10px;
-    background-color: #ffffff;
-}
+/* CSS personnalisé */
 
-/* Header styles */
-.header {
-    background-color: #287265;
-    height: 110px;
-}
-
-.logo img {
+/* Styles pour le logo */
+.logo-img {
     max-height: 100px; /* Assurez-vous que l'image ne dépasse pas la hauteur du header */
 }
 
-/* Footer styles */
+/* Styles pour la barre de navigation */
+.navbar-nav {
+    margin-left: auto; /* Aligne les éléments de la navbar à droite */
+}
+
+.navbar-nav .nav-link {
+    padding: 15px 20px; /* Ajuste les espacements autour des liens de navigation */
+}
+
 .footer {
     padding: 20px;
     background-color: #287265;
     color: #fff;
 }
 
-/* Contact form styles */
 .contact-form form {
     display: grid;
     gap: 10px;
+}
+
+.social-links .btn {
+    margin: 0 5px; /* Espacement entre les icônes sociales */
 }
