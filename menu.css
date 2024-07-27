@@ -8,7 +8,7 @@ body {
 
 /* Header styles */
 .header {
-    background-color: #287265;
+    background-color: #007bff; /* Couleur bleue pour le header */
     color: #fff;
     padding: 10px 0;
     position: fixed;
@@ -17,41 +17,17 @@ body {
     z-index: 1000; /* Assure que le header reste au-dessus des autres éléments */
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
+.navbar-brand img {
+    max-height: 80px; /* Ajuste la taille du logo */
 }
 
-.logo img {
-    max-height: 100px; /* Ajuste la taille du logo */
-    height: auto; /* Maintient le ratio de l'image */
-}
-
-.menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-.menu li {
-    margin-right: 20px;
-}
-
-.menu a {
-    font-size: 1.2rem;
+.navbar-nav .nav-link {
+    font-size: 1rem;
     color: #fff;
-    text-decoration: none;
-    padding: 15px 20px;
 }
 
-.menu a:hover {
+.navbar-nav .nav-link:hover {
     color: #ffd358;
-    background-color: gray;
-    text-decoration: underline;
 }
 
 #search-form {
@@ -60,21 +36,21 @@ nav {
 }
 
 #search-form input[type="search"] {
-    font-size: 17px;
+    font-size: 1rem;
     border-radius: 20px; /* Bords arrondis pour le champ de recherche */
 }
 
 #search-form button {
     border-radius: 20px; /* Bords arrondis pour le bouton */
-    background-color: #287265;
-    color: #fff;
+    background-color: #fff;
+    color: #007bff;
     border: none;
-    padding: 5px 10px;
+    padding: 5px 15px;
     cursor: pointer;
 }
 
 #search-form button:hover {
-    background-color: #1f5b46; /* Assombrit le bouton au survol */
+    background-color: #e9ecef;
 }
 
 /* Main container styles */
@@ -88,11 +64,13 @@ img {
     display: block;
     margin: 0 auto;
     max-width: 100%; /* S'assure que l'image ne dépasse pas la largeur du conteneur */
+    border-radius: 8px; /* Coins arrondis pour les images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour les images */
 }
 
 /* Footer styles */
 .footer {
-    background-color: #287265;
+    background-color: #007bff; /* Couleur bleue pour le footer */
     color: #fff;
     padding: 20px;
     position: relative;
@@ -103,48 +81,37 @@ img {
     align-items: center;
 }
 
-.footer .contact-info,
-.footer .contact-form,
-.footer .social-links {
-    margin: 10px 0;
-    width: 100%;
-    max-width: 1140px; /* Largeur maximale pour les éléments du footer */
-}
-
-.footer .contact-form form {
-    display: grid;
-    gap: 10px;
-}
-
-.footer .contact-form input,
-.footer .contact-form textarea {
-    border-radius: 5px;
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-.footer .contact-form button {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.footer .contact-form button:hover {
-    background-color: #45a049;
+.footer p {
+    margin: 5px 0;
 }
 
 .footer .social-links a {
     color: #fff;
     margin: 0 10px;
     font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.footer .social-links a:hover {
+    color: #ffd358;
+}
+
+/* Tabs */
+.tabs .btn {
+    border-radius: 20px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
 }
 
 /* Responsive adjustments */
 @media (min-width: 576px) {
-    .menu a {
+    .navbar-nav .nav-link {
         font-size: 1.1rem;
     }
 }
