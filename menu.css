@@ -1,30 +1,115 @@
-/* CSS personnalisé */
-
-/* Styles pour le logo */
-.logo-img {
-    max-height: 100px; /* Assurez-vous que l'image ne dépasse pas la hauteur du header */
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Couleur de fond légère */
 }
 
-/* Styles pour la barre de navigation */
+/* Header styles */
+.header {
+    background-color: #287265;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Assure que le header reste au-dessus des autres éléments */
+}
+
+.navbar {
+    padding: 0 15px;
+}
+
+.navbar-brand img {
+    max-height: 100px; /* Ajuste la taille du logo */
+}
+
 .navbar-nav {
     margin-left: auto; /* Aligne les éléments de la navbar à droite */
 }
 
 .navbar-nav .nav-link {
-    padding: 15px 20px; /* Ajuste les espacements autour des liens de navigation */
+    padding: 15px 20px;
+    font-size: 1.2rem;
 }
 
-.footer {
+.navbar-nav .nav-link:hover {
+    color: #ffd358;
+    background-color: gray;
+    text-decoration: underline;
+}
+
+/* Formulaire de recherche dans la navbar */
+.form-inline {
+    margin-left: 15px;
+}
+
+.form-control {
+    border-radius: 20px; /* Bords arrondis pour le champ de recherche */
+}
+
+.btn-outline-success {
+    border-radius: 20px; /* Bords arrondis pour le bouton */
+}
+
+/* Main container styles */
+.container {
+    margin-top: 120px; /* Espace pour le header fixe */
     padding: 20px;
+}
+
+/* Footer styles */
+.footer {
     background-color: #287265;
     color: #fff;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.contact-form form {
+.footer .contact-info,
+.footer .contact-form,
+.footer .social-links {
+    margin: 10px 0;
+}
+
+.footer .contact-form form {
     display: grid;
     gap: 10px;
 }
 
-.social-links .btn {
-    margin: 0 5px; /* Espacement entre les icônes sociales */
+.footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 576px) {
+    .navbar-nav .nav-link {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
 }
