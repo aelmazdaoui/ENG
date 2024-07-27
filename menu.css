@@ -62,6 +62,10 @@ body {
     box-sizing: border-box;
 }
 
+.logo {
+    flex-shrink: 0; /* Empêche le logo de rétrécir */
+}
+
 .logo img {
     background-color: #287265;
     width: 80px; /* Ajustez la largeur de l'image du logo */
@@ -69,9 +73,16 @@ body {
     max-height: 100px; /* S'assurer que l'image n'est pas plus haute que le header */
 }
 
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 nav ul {
-    margin: 100px;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
     list-style: none;
     display: flex;
     align-items: center;
