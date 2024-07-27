@@ -1,3 +1,4 @@
+/* Global styles */
 #wrapper {
     width: 95%;
     margin: 0 auto;
@@ -7,12 +8,11 @@
     width: 100%;
 }
 
-/* Small devices (landscape phones, 576px and up) */
+/* Media queries */
 @media (min-width: 576px) {
     /* Your styles here */
 }
 
-/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     #wrapper {
         width: 90%;
@@ -30,12 +30,10 @@
     }
 }
 
-/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     /* Your styles here */
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     #wrapper {
         width: 90%;
@@ -44,8 +42,8 @@
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
@@ -53,111 +51,87 @@ body {
 .header {
     background-color: #287265;
     height: 110px;
-    margin: 10px;
+    margin: 0;
     position: fixed;
     top: 0;
     width: 100%;
-    text-align: center;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    padding: 0 20px;
 }
 
 .logo img {
     background-color: #287265;
-    position: absolute;
-    margin: 0 auto;
-    width: 150px; /* Ajustez la largeur à la largeur réelle de votre logo */
+    width: 80px; /* Ajustez la largeur de l'image du logo */
     height: auto; /* Cela maintient le rapport hauteur-largeur du logo */
-    left: 0px;
-    top: 0px;
 }
 
-/* Typography */
-h1, h2, h3 {
-    font-family: 'Sonsie One', cursive;
-    color: #2a2a2a;
-}
-
-p, li {
-    font-size: 1.6rem;
-    line-height: 1.5;
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
-    list-style-type: none;
-    display: inline-block;
+    margin-right: 20px;
 }
 
-ul li a {
-    font-size: 1.20em;
+nav ul li a {
+    font-size: 1.2em;
     color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
     letter-spacing: 0.1rem;
-    padding-right: 10px;
 }
 
-ul li a:hover {
+nav ul li a:hover {
     color: #ffd358;
     background: gray;
     text-decoration: underline;
 }
 
-.menu li {
-    float: left;
-    padding: 5px;
-    margin-right: -60px;
-}
-
-.menu li a {
-    text-decoration: none;
-    margin-left: 120px; /* Ajoutez la marge désirée ici */
-}
-
 form {
-    padding-left: 1050px;
-    text-align: center;
     display: flex;
     align-items: center;
 }
 
 input[type="search"] {
     font-size: 17px;
+    margin-right: 10px;
 }
 
 .container {
     max-width: 800px;
-    margin: 90px auto 30px;
+    margin: 140px auto 30px;
     padding: 10px;
     background-color: #ffffff;
 }
 
 .footer {
-    margin-top: 0px;
-    flex-shrink: 0;
     display: flex;
     justify-content: space-between;
-    height: 360px;
     padding: 0;
     margin: 0;
     width: 100%;
-    left: 0px;
-    bottom: 0px;
+    height: 360px;
+    flex-shrink: 0;
+    background-color: #287265;
+    color: #fff;
 }
 
 .contact-info,
 .contact-form {
-    background-color: #287265;
-    padding: 5px;
-    color: #fff;
-    bottom: 0px;
+    padding: 20px;
 }
 
 .contact-form {
     flex-grow: 1;
-    padding: 10px;
 }
 
 .contact-form form {
     display: grid;
     gap: 10px;
-    padding-left: 100px;
 }
