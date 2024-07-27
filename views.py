@@ -6,7 +6,7 @@ def affichage(request):
 	return render(request, 'index.html')
 
 def accueil(request):
-    return render(request, 'accueil.html')
+    return render(request, 'index.html')
 
 def projets(request):
     return render(request, 'projets.html')
