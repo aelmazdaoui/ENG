@@ -8,7 +8,7 @@ body {
 
 /* Header styles */
 .header {
-    background-color: #287265; /* Couleur verte */
+    background-color: #007bff; /* Couleur bleue pour le header */
     color: #fff;
     padding: 10px 0;
     position: fixed;
@@ -17,50 +17,40 @@ body {
     z-index: 1000; /* Assure que le header reste au-dessus des autres éléments */
 }
 
-.header .logo img {
+.navbar-brand img {
     max-height: 80px; /* Ajuste la taille du logo */
 }
 
-.menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around; /* Répartit les éléments horizontalement */
-    align-items: center;
-}
-
-.menu li {
-    margin-right: 20px;
-}
-
-.menu a {
+.navbar-nav .nav-link {
     font-size: 1rem;
     color: #fff;
-    text-decoration: none;
-    padding: 10px;
 }
 
-.menu a:hover {
-    color: #ffd358; /* Couleur au survol */
-    background-color: rgba(0, 0, 0, 0.1); /* Fond léger au survol */
-    border-radius: 5px;
+.navbar-nav .nav-link:hover {
+    color: #ffd358;
 }
 
-form {
+#search-form {
     display: flex;
     align-items: center;
 }
 
-form input[type="search"] {
+#search-form input[type="search"] {
     font-size: 1rem;
     border-radius: 20px; /* Bords arrondis pour le champ de recherche */
-    border: 1px solid #ddd;
-    padding: 5px 10px;
 }
 
-form button {
-    display: none; /* Masquer le bouton car le formulaire de recherche est en champ texte uniquement */
+#search-form button {
+    border-radius: 20px; /* Bords arrondis pour le bouton */
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+#search-form button:hover {
+    background-color: #e9ecef;
 }
 
 /* Main container styles */
@@ -69,25 +59,18 @@ form button {
     padding: 20px;
 }
 
-h1, h2, h3 {
-    color: #287265; /* Couleur verte pour les titres */
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-/* Video styles */
-video {
+/* Image styles */
+img {
     display: block;
-    margin: 20px auto;
-    border-radius: 8px; /* Coins arrondis pour le cadre vidéo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour le cadre vidéo */
+    margin: 0 auto;
+    max-width: 100%; /* S'assure que l'image ne dépasse pas la largeur du conteneur */
+    border-radius: 8px; /* Coins arrondis pour les images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour les images */
 }
 
 /* Footer styles */
 .footer {
-    background-color: #287265; /* Couleur verte pour le footer */
+    background-color: #007bff; /* Couleur bleue pour le footer */
     color: #fff;
     padding: 20px;
     position: relative;
@@ -98,35 +81,8 @@ video {
     align-items: center;
 }
 
-.footer .contact-info, .footer .contact-form {
-    margin: 10px 0;
-    width: 100%;
-    max-width: 1140px; /* Largeur maximale pour les éléments du footer */
-}
-
-.footer .contact-form form {
-    display: grid;
-    gap: 10px;
-}
-
-.footer .contact-form input,
-.footer .contact-form textarea {
-    border-radius: 5px;
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-.footer .contact-form button {
-    background-color: #4CAF50; /* Couleur verte pour le bouton */
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.footer .contact-form button:hover {
-    background-color: #45a049;
+.footer p {
+    margin: 5px 0;
 }
 
 .footer .social-links a {
@@ -137,12 +93,25 @@ video {
 }
 
 .footer .social-links a:hover {
-    color: #ffd358; /* Couleur au survol */
+    color: #ffd358;
+}
+
+/* Tabs */
+.tabs .btn {
+    border-radius: 20px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
 }
 
 /* Responsive adjustments */
 @media (min-width: 576px) {
-    .menu a {
+    .navbar-nav .nav-link {
         font-size: 1.1rem;
     }
 }
