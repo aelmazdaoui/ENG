@@ -71,11 +71,11 @@ body {
 
 nav ul {
     margin: 100px;
-    padding: 0;
+    padding: 20px;
     list-style: none;
     display: flex;
     align-items: center;
-    height: 75%;
+    height: 100%;
 }
 
 nav ul li {
