@@ -1,42 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Qui sommes-nous</title>
-    <!-- Des choses -->
-    <!--meta name="viewport" content="width=device-width"/--!>
-    <!-- Encore des choses -->
     <meta charset="utf-8">
+    <title>Qui sommes-nous</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Inclusion de Bootstrap et Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Votre CSS personnalisé -->
     <link rel="stylesheet" type="text/css" href="menu.css">
 </head>
 <body>
-    <body>
-    <div class="header">
-        <nav>
-            <div class="logo">
-                <a href="#"><img src="ass.jpg"></a>
-            </div>
-            <ul class="menu">
-
-                <li><a href ="base.html">Acceuil</a></li>
-                <li><a href ="projets.html">Projects</a></li>
-                <li><a href ="qui_sommes_nous.html">qui_sommes_nous</a></li>
-                <li><a href ="#">contact</a></li>
-                 
+    <header class="header navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="ass.jpg" alt="Logo" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="base.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projets.html">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="qui_sommes_nous.html">Qui sommes-nous</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
             </ul>
-            <form>
-                <input type="search" name="q"placeholder="recherche">
+            <form class="form-inline ml-3" id="search-form">
+                <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
-        </nav>
-        
-    </div>
-   
+        </div>
+    </header>
 
-    <div class="container">
-        <p>Informations sur l'association IDALI</p>
-        <!-- Ajoutez le contenu de la page ici -->
+    <div class="container mt-5 pt-5">
+        <h1>Informations sur l'association IDALI</h1>
         <ul>
             <li>Nom de la région : Douar Akjgal Tamdast, Province d'Al Haouz </li>
-
             <li>Nom de l'association locale : Association Adali pour le Développement et la Culture</li>
             <li>Date de fondation de l'association : 31 novembre 2017</li>
             <li>Nombre de membres de l'association : 9 membres</li>
@@ -44,26 +54,23 @@
             <li>Nom et numéro de téléphone d'un autre membre de l'association : Abdelhakim Al Mazdaoui - 06 54 66 89 55</li>
             <li>Domaine d'activité de l'association : L'association opère dans le cadre d'activités sociales, solidaires, de développement et culturelles.</li>
         </ul>
-   </div>
-    <footer class="footer">
-    <div class="contact-info">
-        <div class="container">
+    </div>
+
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container text-center">
             <p>Contact : contact@monassociation.com</p>
             <p>Adresse : Dowar Agjgal, Tighdouine Alhaouz</p>
             <p>Téléphone : +212654-66-89-55</p>
         </div>
-    </div>
-    <div class="contact-form">
-        <div class="container">
+        <div class="container text-center mt-3">
             <h3>Contactez-nous</h3>
-            <form id="contact-form">
-                <input type="text" name="name" placeholder="Nom">
-                <input type="email" name="email" placeholder="Email">
-                <textarea name="message" placeholder="Message"></textarea>
-                <button type="submit">Envoyer</button>
+            <form id="contact-form" class="form-inline d-flex flex-column align-items-center">
+                <input type="text" name="name" placeholder="Nom" class="form-control mb-2" style="width: 300px;">
+                <input type="email" name="email" placeholder="Email" class="form-control mb-2" style="width: 300px;">
+                <textarea name="message" placeholder="Message" class="form-control mb-2" style="width: 300px; height: 150px;"></textarea>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
             </form>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>
