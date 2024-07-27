@@ -66,7 +66,7 @@ body {
     background-color: #287265;
     width: 80px; /* Ajustez la largeur de l'image du logo */
     height: auto; /* Cela maintient le rapport hauteur-largeur du logo */
-    max-height: -50px; /* S'assurer que l'image n'est pas plus haute que le header */
+    max-height: 100px; /* S'assurer que l'image n'est pas plus haute que le header */
 }
 
 nav ul {
@@ -79,7 +79,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: -100px;
+    margin-right: 20px;
 }
 
 nav ul li a {
