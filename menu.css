@@ -17,46 +17,77 @@ body {
     z-index: 1000; /* Assure que le header reste au-dessus des autres éléments */
 }
 
-.navbar {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 0 15px;
 }
 
-.navbar-brand img {
+.logo img {
     max-height: 100px; /* Ajuste la taille du logo */
+    height: auto; /* Maintient le ratio de l'image */
 }
 
-.navbar-nav {
-    margin-left: auto; /* Aligne les éléments de la navbar à droite */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
 }
 
-.navbar-nav .nav-link {
-    padding: 15px 20px;
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
     font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
 }
 
-.navbar-nav .nav-link:hover {
+.menu a:hover {
     color: #ffd358;
     background-color: gray;
     text-decoration: underline;
 }
 
-/* Formulaire de recherche dans la navbar */
-.form-inline {
-    margin-left: 15px;
+#search-form {
+    display: flex;
+    align-items: center;
 }
 
-.form-control {
+#search-form input[type="search"] {
+    font-size: 17px;
     border-radius: 20px; /* Bords arrondis pour le champ de recherche */
 }
 
-.btn-outline-success {
+#search-form button {
     border-radius: 20px; /* Bords arrondis pour le bouton */
+    background-color: #287265;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#search-form button:hover {
+    background-color: #1f5b46; /* Assombrit le bouton au survol */
 }
 
 /* Main container styles */
 .container {
     margin-top: 120px; /* Espace pour le header fixe */
     padding: 20px;
+}
+
+/* Image styles */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* S'assure que l'image ne dépasse pas la largeur du conteneur */
 }
 
 /* Footer styles */
@@ -76,11 +107,33 @@ body {
 .footer .contact-form,
 .footer .social-links {
     margin: 10px 0;
+    width: 100%;
+    max-width: 1140px; /* Largeur maximale pour les éléments du footer */
 }
 
 .footer .contact-form form {
     display: grid;
     gap: 10px;
+}
+
+.footer .contact-form input,
+.footer .contact-form textarea {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.footer .contact-form button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer .contact-form button:hover {
+    background-color: #45a049;
 }
 
 .footer .social-links a {
@@ -91,7 +144,7 @@ body {
 
 /* Responsive adjustments */
 @media (min-width: 576px) {
-    .navbar-nav .nav-link {
+    .menu a {
         font-size: 1.1rem;
     }
 }
