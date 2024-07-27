@@ -1,47 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    
-    <!-- Des choses -->
-    <!--meta name="viewport" content="width=device-width"/--!>
-    <!-- Encore des choses -->
-
-    <title> menu </title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu</title>
+    <!-- Inclusion de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Votre CSS personnalisé -->
     <link rel="stylesheet" type="text/css" href="menu.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    
-    <div class="header">
-        
-        <nav>
-            <div class="logo">
-        <a href="#"><img src="ass.jpg"></a>
-    </div>
-            <ul class="menu">
-
-                <li><a href ="base.html">Acceuil</a></li>
-                <li><a href ="projets.html">Projects</a></li>
-                <li><a href ="qui_sommes_nous.html">qui_sommes_nous</a></li>
-                <li><a href ="#">contact</a></li>
-                 
+    <header class="header navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="ass.jpg" alt="Logo" class="img-fluid" style="max-height: 100px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="base.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projets.html">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="qui_sommes_nous.html">Qui sommes-nous</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
             </ul>
-            <form id="search-form">
-                <input type="search" name="q" placeholder="recherche">
-                <button type="button" onclick="openTab('recherche')">Search</button>
+            <form class="form-inline ml-3" id="search-form">
+                <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
-        </nav>
-        
-    </div>
+        </div>
+    </header>
 
-    <div class="container">
+    <div class="container mt-5 pt-5">
         <header>
-            <h1 style="color: #4CAF50;">Association IDALI pour le développement et la culture</h1>
+            <h1 class="text-success">Association IDALI pour le développement et la culture</h1>
         </header>
-        <nav>
-            <!-- Ajoutez ici vos liens de navigation vers d'autres pages si nécessaire -->
-        </nav>
         <main>
             <h2>À propos de notre association</h2>
             <p>L'Association IDALI, fondée en 2017, incarne un engagement résolu en faveur du développement culturel et social. Notre mission est ancrée dans la valorisation et la promotion de la culture locale, ainsi que dans la mise en œuvre de projets qui contribuent au progrès de la société.
@@ -50,8 +55,8 @@ Depuis notre création, nous nous sommes engagés à élargir les horizons de la
 
 Située au cœur de Dowar Agjgal, un lieu emblématique du patrimoine de Tighdouine Alhaouz, notre association trouve son inspiration dans la richesse historique et culturelle de cette région. Nous nous efforçons de perpétuer les traditions locales tout en encourageant l'innovation et l'épanouissement individuel.
 
-Que ce soit à travers des événements culturels, des projets sociaux ou des initiatives de développement, l'Association IDALI demeure un acteur passionné et engagé dans la création d'un avenir meilleur pour notre communauté et notre patrimoine collectif..</p>
-            <img src="test.jpg" alt="Desktop" style="display: block; margin: 0 auto;">
+Que ce soit à travers des événements culturels, des projets sociaux ou des initiatives de développement, l'Association IDALI demeure un acteur passionné et engagé dans la création d'un avenir meilleur pour notre communauté et notre patrimoine collectif.</p>
+            <img src="test.jpg" alt="Image" class="img-fluid d-block mx-auto">
 
             <h2>Notre mission</h2>
             <p>La mission de notre association est de...</p>
@@ -77,100 +82,70 @@ Que ce soit à travers des événements culturels, des projets sociaux ou des in
                 <!-- Ajoutez ici d'autres partenaires -->
             </ul>
 
-
-            <ul>
-                <li><a href="{% url 'accueil' %}">Accueil</a></li>
-                <li><a href="{% url 'projets' %}">Projets</a></li>
-                <li><a href="{% url 'qui_sommes_nous' %}">Qui Sommes Nous</a></li>
-            </ul>
-
             <!-- Ajout de l'image -->
-            <img src="C:/Users\abdel/Desktop/mes programmes C/PYTHON/embed_files/HTML/img.png" alt="Desktop" style="display: block; margin: 0 auto;">
+            <img src="C:/Users/abdel/Desktop/mes programmes C/PYTHON/embed_files/HTML/img.png" alt="Desktop" class="img-fluid d-block mx-auto">
         </main>
         
         <!-- Onglets -->
-        <div class="tabs">
-            <button class="tab-button" onclick="openTab('qui-nous')">Qui nous sommes</button>
-            <button class="tab-button" onclick="openTab('contact')">Contactez-nous</button>
+        <div class="tabs mt-4">
+            <button class="btn btn-primary mr-2" onclick="openTab('qui-nous')">Qui nous sommes</button>
+            <button class="btn btn-primary" onclick="openTab('contact')">Contactez-nous</button>
         </div>
 
-        <section id="qui-nous" class="tab-content">
+        <section id="qui-nous" class="tab-content mt-4" style="display: none;">
             <h2>Qui nous sommes</h2>
             <p>Informations sur notre association.</p>
         </section>
 
-        <section id="contact" class="tab-content">
+        <section id="contact" class="tab-content mt-4" style="display: none;">
             <h2>Contactez-nous</h2>
             <p>Nous serions ravis de vous entendre !</p>
         </section>
         <!-- Fin des onglets -->
-
-        <footer>
-            <p>Contact : contact@monassociation.com</p>
-        </footer>
-        <li>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-                    
-        </li>
     </div>
- 
-<script>
-    function openTab(tabName) {
-    var i, tabContent;
-    tabContent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabContent.length; i++) {
-        tabContent[i].style.display = "none";
-    }
-    document.getElementById(tabName).style.display = "block";
-    
-    if (tabName === 'recherche') {
-        const searchQuery = document.querySelector('input[name="q"]').value;
-        
-        // Make an AJAX request to the backend for search results
-        fetch(`/search?q=${searchQuery}`)
-            .then(response => response.json())
-            .then(data => {
-                // Update content based on search results
-                const searchResultsContainer = document.getElementById('search-results');
-                searchResultsContainer.innerHTML = ''; // Clear previous results
-                
-                data.forEach(result => {
-                    const resultItem = document.createElement('div');
-                    resultItem.textContent = result.title; // Adjust based on your data structure
-                    searchResultsContainer.appendChild(resultItem);
-                });
-            })
-            .catch(error => console.error('Error fetching search results:', error));
-    }
-}
 
-</script>
- <footer class="footer">
-    <div class="contact-info">
+    <footer class="footer bg-dark text-white py-4">
         <div class="container">
             <p>Contact : contact@monassociation.com</p>
             <p>Adresse : Dowar Agjgal, Tighdouine Alhaouz</p>
             <p>Téléphone : +212654-66-89-55</p>
+            <div class="social-links">
+                <a href="#" class="text-white mr-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white mr-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-    </div>
-    <div class="contact-form">
-        <div class="container">
-            <h3>Contactez-nous</h3>
-            <form id="contact-form">
-                <input type="text" name="name" placeholder="Nom">
-                <input type="email" name="email" placeholder="Email">
-                <textarea name="message" placeholder="Message"></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
-        </div>
-    </div>
-    <div class="social-links">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        
-    </div>
-</footer>
+    </footer>
 
+    <script>
+        function openTab(tabName) {
+            var i, tabContent;
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+            
+            if (tabName === 'recherche') {
+                const searchQuery = document.querySelector('input[name="q"]').value;
+                
+                // Make an AJAX request to the backend for search results
+                fetch(`/search?q=${searchQuery}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Update content based on search results
+                        const searchResultsContainer = document.getElementById('search-results');
+                        searchResultsContainer.innerHTML = ''; // Clear previous results
+                        
+                        data.forEach(result => {
+                            const resultItem = document.createElement('div');
+                            resultItem.textContent = result.title; // Adjust based on your data structure
+                            searchResultsContainer.appendChild(resultItem);
+                        });
+                    })
+                    .catch(error => console.error('Error fetching search results:', error));
+            }
+        }
+    </script>
 </body>
 </html>
