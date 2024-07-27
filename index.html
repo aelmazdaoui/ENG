@@ -9,23 +9,36 @@
 </head>
 <body>
     <header class="header bg-dark text-white fixed-top">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo">
-                <a href="#"><img src="logo.png" alt="Logo" class="img-fluid"></a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="Logo" class="img-fluid logo-img">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="base.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projets.html">Projets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="qui_sommes_nous.html">Qui sommes-nous</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline ml-3">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+                    </form>
+                </div>
             </div>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link" href="base.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projets.html">Projets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="qui_sommes_nous.html">Qui sommes-nous</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                </ul>
-                <form class="form-inline ml-3">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Recherche">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
-                </form>
-            </nav>
-        </div>
+        </nav>
     </header>
 
     <div class="container mt-5 pt-5">
@@ -82,9 +95,9 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
 </html>
