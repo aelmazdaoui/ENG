@@ -1,53 +1,90 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de projet</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css"> <!-- Votre fichier CSS personnalisé -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projets</title>
+    <!-- Inclusion de Bootstrap et Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Votre CSS personnalisé -->
+    <link rel="stylesheet" type="text/css" href="menu.css">
 </head>
 <body>
-    <header class="header bg-dark text-white fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="logo.png" alt="Logo" class="img-fluid logo-img">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="projets.html">Projets</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="qui_sommes_nous.html">Qui sommes-nous</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline ml-3">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+    <header class="header navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="ass.jpg" alt="Logo" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="base.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="projets.html">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="qui_sommes_nous.html">Qui sommes-nous</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline ml-3" id="search-form">
+                <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
     </header>
 
     <div class="container mt-5 pt-5">
-        <h1 class="custom-margin">Page de projet</h1>
-        <p>L'association ID ALI Pour le développement et culture travaille sur différents projets...</p>
+        <h1>Page de projet</h1>
+        <p>L'association ID ALI Pour le développement et culture travaille sur différents projets dans des différents domaines pour aider et faciliter plusieurs services sur la population.</p>
+        
+        <video controls width="640" height="360">
+            <source src="test.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
+        
+        <h2>Principales activités de l'association et son historique</h2>
+        <ul>
+            <li>Construction d'un siège pour l'association en tant que première étape en 2018.</li>
+            <li>Activité culturelle destinée aux enfants du village visant à stimuler la jeunesse, à créer des opportunités de créativité et de compétition. Cette activité a été coordonnée avec l'Association Anarouz Tamdast à la fin de l'année 2018.</li>
+            <li>Fourniture d'eau potable à la population en utilisant des sources comme source, ainsi que l'expansion de son réseau depuis le 15 janvier 2019. L'association veille à préserver cette ressource vitale en entretenant son réseau.</li>
+            <li>Construction d'un petit réservoir pour stocker l'eau la même année dans le cadre du projet d'eau potable.</li>
+            <li>Construction d'un pont à Aghil grâce au travail solidaire entre les habitants de la région et avec l'aide de bienfaiteurs.</li>
+        </ul>
+
+        <h2>Quels sont les problèmes les plus importants auxquels la région est confrontée ?</h2>
+        <ul>
+            <li>Pénurie d'eau potable et d'irrigation, en particulier pendant l'été.</li>
+            <li>Après l'école et son incapacité à remplir ses rôles assignés "manque de salles de classe, surpopulation et fragilité de l'infrastructure".</li>
+            <li>Absence d'une section préscolaire pour les enfants de moins de six ans dans le quartier, afin de faciliter leur intégration dans le système éducatif.</li>
+            <li>Faiblesse de l'infrastructure routière et fragilité, en particulier pendant l'hiver en raison de chutes de neige et de pluies, ce qui aggrave les conditions de vie.</li>
+            <li>La mosquée est encore en cours de préparation et n'est pas terminée.</li>
+            <li>Le phénomène du gaspillage scolaire, en particulier pour les filles en raison de l'éloignement du collège.</li>
+        </ul>
+
+        <h2>Projets possibles</h2>
+        <ul>
+            <li>Forage d'un puits dans la région afin de fournir de l'eau potable, en particulier pendant l'été.</li>
+            <li>Construction d'une citerne pouvant contenir plus de 40 tonnes pour le stockage de l'eau.</li>
+            <li>Établissement d'une section préscolaire commune entre les deux hameaux de Crovad, ainsi qu'au niveau primaire et secondaire, en raison de la distance de l'école.</li>
+            <li>Fourniture d'oliviers ou de caroubiers à la population en tant que projet durable pour la communauté locale.</li>
+            <li>Aménagement et maintenance de la mosquée en fournissant des fenêtres, de la peinture et de l'enduit.</li>
+            <li>Peinture de l'école et fourniture de matériel scolaire.</li>
+            <li>Équipement du siège de l'association avec quelques ordinateurs pour renforcer les capacités informatiques d'apprentissage des élèves et des étudiants de la région.</li>
+        </ul>
     </div>
 
     <footer class="footer bg-dark text-white py-4">
-        <div class="container">
+        <div class="container text-center">
             <p>Contact : contact@monassociation.com</p>
             <p>Adresse : Dowar Agjgal, Tighdouine Alhaouz</p>
             <p>Téléphone : +212654-66-89-55</p>
@@ -58,10 +95,5 @@
             </div>
         </div>
     </footer>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
 </html>
