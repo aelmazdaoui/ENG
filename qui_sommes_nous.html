@@ -36,45 +36,56 @@
                     <a class="nav-link" href="#">Contact</a>
                 </li>
             </ul>
-            <form class="form-inline ml-3" id="search-form">
-                <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
         </div>
     </header>
 
-    <div class="container">
-        <div class="main-content">
-            <h1>Informations sur l'association IDALI</h1>
-            <ul>
-                <li>Nom de la région : Douar Akjgal Tamdast, Province d'Al Haouz</li>
-                <li>Nom de l'association locale : Association Adali pour le Développement et la Culture</li>
-                <li>Date de fondation de l'association : 31 novembre 2017</li>
-                <li>Nombre de membres de l'association : 9 membres</li>
-                <li>Nom et numéro de téléphone du président de l'association : Mohammed Fadel - 06 42 38 67 37</li>
-                <li>Nom et numéro de téléphone d'un autre membre de l'association : Abdelhakim Al Mazdaoui - 06 54 66 89 55</li>
-                <li>Domaine d'activité de l'association : L'association opère dans le cadre d'activités sociales, solidaires, de développement et culturelles.</li>
-            </ul>
-        </div>
-        <div class="cta-section">
-            <button>Rejoignez notre association</button>
-        </div>
-    </div>
+    <main class="main-content">
+        <section class="hero text-center">
+            <div class="container">
+                <h1>Bienvenue sur notre site</h1>
+                <p>Découvrez qui nous sommes et ce que nous faisons pour la communauté.</p>
+                <a href="#contact-form" class="btn btn-primary">Contactez-nous</a>
+            </div>
+        </section>
+
+        <section class="info text-center">
+            <div class="container">
+                <h2>À propos de l'association</h2>
+                <p>L'association Adali pour le Développement et la Culture est dédiée à améliorer les conditions de vie à Douar Akjgal Tamdast.</p>
+                <ul>
+                    <li>Date de fondation : 31 novembre 2017</li>
+                    <li>Membres : 9 membres</li>
+                    <li>Domaine : Activités sociales et culturelles</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cta text-center">
+            <div class="container">
+                <h2>Rejoignez notre cause</h2>
+                <p>Votre soutien est précieux pour nous. Participez à nos projets et faites une différence.</p>
+                <a href="#contact-form" class="btn btn-primary">Rejoindre</a>
+            </div>
+        </section>
+
+        <section class="contact text-center">
+            <div class="container">
+                <h2>Contactez-nous</h2>
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Nom" class="form-control mb-2">
+                    <input type="email" name="email" placeholder="Email" class="form-control mb-2">
+                    <textarea name="message" placeholder="Message" class="form-control mb-2"></textarea>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="footer-left">
+        <div class="container text-center">
             <p>Contact : contact@monassociation.com</p>
             <p>Adresse : Dowar Agjgal, Tighdouine Alhaouz</p>
             <p>Téléphone : +212654-66-89-55</p>
-        </div>
-        <div class="footer-right">
-            <h3>Contactez-nous</h3>
-            <form id="contact-form">
-                <input type="text" name="name" placeholder="Nom" class="form-control mb-2">
-                <input type="email" name="email" placeholder="Email" class="form-control mb-2">
-                <textarea name="message" placeholder="Message" class="form-control mb-2" style="height: 150px;"></textarea>
-                <button type="submit" class="btn btn-primary">Envoyer</button>
-            </form>
         </div>
     </footer>
 </body>
