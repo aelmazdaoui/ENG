@@ -8,7 +8,7 @@ body {
 
 /* Header styles */
 .header {
-    background-color: #287265; /* Couleur verte */
+    background-color: #007bff; /* Couleur bleue pour le header */
     color: #fff;
     padding: 10px 0;
     position: fixed;
@@ -43,7 +43,7 @@ body {
 #search-form button {
     border-radius: 20px; /* Bords arrondis pour le bouton */
     background-color: #fff;
-    color: #287265; /* Couleur verte */
+    color: #007bff;
     border: none;
     padding: 5px 15px;
     cursor: pointer;
@@ -59,9 +59,18 @@ body {
     padding: 20px;
 }
 
+/* Image styles */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* S'assure que l'image ne dépasse pas la largeur du conteneur */
+    border-radius: 8px; /* Coins arrondis pour les images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour les images */
+}
+
 /* Footer styles */
 .footer {
-    background-color: #287265; /* Couleur verte */
+    background-color: #007bff; /* Couleur bleue pour le footer */
     color: #fff;
     padding: 20px;
     position: relative;
