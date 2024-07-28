@@ -59,11 +59,6 @@ body {
     padding: 20px;
 }
 
-/* Custom margin for h1 */
-.custom-margin {
-    margin-top: 40px; /* Ajoutez l'espace spécifique ici */
-}
-
 /* Footer styles */
 .footer {
     background-color: #287265; /* Couleur verte */
@@ -90,6 +85,19 @@ body {
 
 .footer .social-links a:hover {
     color: #ffd358;
+}
+
+/* Tabs */
+.tabs .btn {
+    border-radius: 20px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
 }
 
 /* Responsive adjustments */
