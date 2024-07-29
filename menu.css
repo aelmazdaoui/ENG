@@ -2,32 +2,53 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Couleur de fond légère */
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light background color */
+    line-height: 1.6;
+    color: #343a40; /* Dark text color for better readability */
 }
 
 /* Header styles */
 .header {
-    background-color: #007bff; /* Couleur bleue pour le header */
+    background-color: #007bff; /* Blue color for header */
     color: #fff;
-    padding: 10px 0;
+    padding: 10px 20px;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Assure que le header reste au-dessus des autres éléments */
+    z-index: 1000; /* Ensures header stays above other elements */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar-brand img {
-    max-height: 80px; /* Ajuste la taille du logo */
+    max-height: 50px; /* Adjust logo size */
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px;
 }
 
 .navbar-nav .nav-link {
     font-size: 1rem;
     color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #ffd358;
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
 #search-form {
@@ -37,48 +58,185 @@ body {
 
 #search-form input[type="search"] {
     font-size: 1rem;
-    border-radius: 20px; /* Bords arrondis pour le champ de recherche */
+    border-radius: 20px; /* Rounded edges for search field */
+    border: 1px solid #ced4da;
+    padding: 5px 10px;
+    margin-right: 10px;
 }
 
 #search-form button {
-    border-radius: 20px; /* Bords arrondis pour le bouton */
+    border-radius: 20px; /* Rounded edges for button */
     background-color: #fff;
     color: #007bff;
     border: none;
     padding: 5px 15px;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 #search-form button:hover {
     background-color: #e9ecef;
+    color: #0056b3;
+}
+
+/* Hero section */
+.hero {
+    background: url('path/to/your/image.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.hero .btn {
+    background-color: #ffd358;
+    color: #343a40;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #ffce44;
+    color: #212529;
 }
 
 /* Main container styles */
 .container {
-    margin-top: 120px; /* Espace pour le header fixe */
+    margin-top: 120px; /* Space for fixed header */
     padding: 20px;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Image styles */
-img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%; /* S'assure que l'image ne dépasse pas la largeur du conteneur */
-    border-radius: 8px; /* Coins arrondis pour les images */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour les images */
+/* Features section */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.feature {
+    flex: 1 1 30%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+.feature img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.feature p {
+    font-size: 1rem;
+}
+
+/* Testimonials section */
+.testimonials {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonial {
+    margin: 20px 0;
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.testimonial .author {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Call to Action section */
+.cta {
+    background-color: #007bff;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 40px 0;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta .btn {
+    background-color: #ffd358;
+    color: #343a40;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta .btn:hover {
+    background-color: #ffce44;
+    color: #212529;
 }
 
 /* Footer styles */
 .footer {
-    background-color: #007bff; /* Couleur bleue pour le footer */
+    background-color: #343a40; /* Dark color for footer */
     color: #fff;
     padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Ajout pour meilleure réactivité sur petits écrans */
+    flex-wrap: wrap; /* Ensures better responsiveness on small screens */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
 .footer-left,
@@ -100,27 +258,15 @@ img {
 }
 
 .footer .social-links a {
-    color: #fff;
+    color: #ffd358;
     margin: 0 10px;
     font-size: 1.5rem;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .footer .social-links a:hover {
-    color: #ffd358;
-}
-
-/* Tabs */
-.tabs .btn {
-    border-radius: 20px;
-}
-
-.tab-content {
-    display: none;
-}
-
-.tab-content.active {
-    display: block;
+    color: #ffce44;
 }
 
 /* Responsive adjustments */
@@ -132,6 +278,17 @@ img {
     .footer-left,
     .footer-right {
         text-align: center;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-nav {
+        flex-direction: column;
+    }
+    .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-top: 10px;
     }
 }
 
