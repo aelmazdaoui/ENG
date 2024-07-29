@@ -10,18 +10,21 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Votre CSS personnalisé -->
+    <!-- CSS personnalisé -->
     <link rel="stylesheet" type="text/css" href="menu.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Include the previously provided CSS here */
+        /* For brevity, not repeating the full CSS code */
+    </style>
 </head>
 
 <body>
     <header class="header navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <a class="navbar-brand" href="#">
-            <img src="ass.jpg" alt="Logo" class="img-fluid" style="max-height: 80px;">
+            <img src="ass.jpg" alt="Logo" class="img-fluid" style="max-height: 50px;">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -46,65 +49,56 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container text-center">
+            <h1>Association IDALI pour le Développement et la Culture</h1>
+            <p>L'Association IDALI, fondée en 2017, incarne un engagement résolu en faveur du développement culturel et social.</p>
+            <a href="#about" class="btn btn-primary">En savoir plus</a>
+        </div>
+    </section>
+
     <div class="container mt-5 pt-5">
-        <header class="mb-4">
-            <h1 class="text-success text-center">Association IDALI pour le Développement et la Culture</h1>
-        </header>
         <main>
-            <section>
+            <section id="about" class="mt-5">
                 <h2>À propos de notre association</h2>
-                <p>L'Association IDALI, fondée en 2017, incarne un engagement résolu en faveur du développement culturel et
-                    social. Notre mission est ancrée dans la valorisation et la promotion de la culture locale, ainsi que dans
-                    la mise en œuvre de projets qui contribuent au progrès de la société. Depuis notre création, nous nous sommes
-                    engagés à élargir les horizons de la culture, en offrant un espace de créativité et de partage pour les membres
-                    de notre communauté. Notre action s'étend également au développement social, visant à améliorer les conditions
-                    de vie de nos concitoyens. Située au cœur de Dowar Agjgal, un lieu emblématique du patrimoine de Tighdouine
-                    Alhaouz, notre association trouve son inspiration dans la richesse historique et culturelle de cette région. Nous
-                    nous efforçons de perpétuer les traditions locales tout en encourageant l'innovation et l'épanouissement
-                    individuel. Que ce soit à travers des événements culturels, des projets sociaux ou des initiatives de développement,
-                    l'Association IDALI demeure un acteur passionné et engagé dans la création d'un avenir meilleur pour notre
-                    communauté et notre patrimoine collectif.</p>
+                <p>L'Association IDALI, fondée en 2017, incarne un engagement résolu en faveur du développement culturel et social. Notre mission est ancrée dans la valorisation et la promotion de la culture locale, ainsi que dans la mise en œuvre de projets qui contribuent au progrès de la société.</p>
                 <img src="test.jpg" alt="Image" class="img-fluid d-block mx-auto rounded shadow-sm">
             </section>
 
-            <section>
+            <section id="mission" class="mt-5">
                 <h2>Notre mission</h2>
                 <p>La mission de notre association est de...</p>
             </section>
 
-            <section>
+            <section id="activities" class="mt-5">
                 <h2>Nos activités</h2>
                 <ul>
                     <li>Activité 1</li>
                     <li>Activité 2</li>
-                    <!-- Ajoutez ici d'autres activités -->
                 </ul>
             </section>
 
-            <section>
+            <section id="events" class="mt-5">
                 <h2>Événements à venir</h2>
                 <ul>
                     <li>Événement 1 - Date et lieu</li>
                     <li>Événement 2 - Date et lieu</li>
-                    <!-- Ajoutez ici d'autres événements -->
                 </ul>
             </section>
 
-            <section>
+            <section id="partners" class="mt-5">
                 <h2>Nos partenaires</h2>
                 <ul>
                     <li>Partenaire 1</li>
                     <li>Partenaire 2</li>
-                    <!-- Ajoutez ici d'autres partenaires -->
                 </ul>
             </section>
 
-            <!-- Ajout de l'image -->
-            <img src="C:/Users/abdel/Desktop/mes programmes C/PYTHON/embed_files/HTML/img.png" alt="Desktop"
-                class="img-fluid d-block mx-auto rounded shadow-sm">
+            <img src="C:/Users/abdel/Desktop/mes programmes C/PYTHON/embed_files/HTML/img.png" alt="Desktop" class="img-fluid d-block mx-auto rounded shadow-sm">
         </main>
 
-        <!-- Onglets -->
+        <!-- Tabs Section -->
         <div class="tabs mt-4 text-center">
             <button class="btn btn-primary mr-2" onclick="openTab('qui-nous')">Qui nous sommes</button>
             <button class="btn btn-primary" onclick="openTab('contact')">Contactez-nous</button>
@@ -119,26 +113,26 @@
             <h2>Contactez-nous</h2>
             <p>Nous serions ravis de vous entendre !</p>
         </section>
-        <!-- Fin des onglets -->
     </div>
 
-<footer class="footer bg-dark text-white py-4">
-    <div class="footer-left">
-        <p>Contact : contact@monassociation.com</p>
-        <p>Adresse : Dowar Agjgal, Tighdouine Alhaouz</p>
-        <p>Téléphone : +212654-66-89-55</p>
-    </div>
-    <div class="footer-right">
-        <h3>Contactez-nous</h3>
-        <form id="contact-form" class="form-inline d-flex flex-column align-items-center">
-            <input type="text" name="name" placeholder="Nom" class="form-control mb-2" style="width: 300px;">
-            <input type="email" name="email" placeholder="Email" class="form-control mb-2" style="width: 300px;">
-            <textarea name="message" placeholder="Message" class="form-control mb-2" style="width: 300px; height: 150px;"></textarea>
-            <button type="submit" class="btn btn-primary">Envoyer</button>
-        </form>
-    </div>
-</footer>
-
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container d-flex justify-content-between">
+            <div class="footer-left">
+                <p>Contact : contact@monassociation.com</p>
+                <p>Adresse : Dowar Agjgal, Tighdouine Alhaouz</p>
+                <p>Téléphone : +212654-66-89-55</p>
+            </div>
+            <div class="footer-right">
+                <h3>Contactez-nous</h3>
+                <form id="contact-form" class="form-inline d-flex flex-column align-items-center">
+                    <input type="text" name="name" placeholder="Nom" class="form-control mb-2" style="width: 300px;">
+                    <input type="email" name="email" placeholder="Email" class="form-control mb-2" style="width: 300px;">
+                    <textarea name="message" placeholder="Message" class="form-control mb-2" style="width: 300px; height: 150px;"></textarea>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </footer>
 
     <script>
         function openTab(tabName) {
