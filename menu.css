@@ -1,30 +1,37 @@
-/* Global styles */
+/* Global Styles */
+:root {
+    --primary-color: #ff6f61; /* Example primary color */
+    --secondary-color: #4a4a4a; /* Example secondary color */
+    --background-color: #f0f0f0; /* Example background color */
+    --text-color: #333333; /* Example text color */
+    --header-footer-color: #212121; /* Example header/footer background color */
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Light background color */
+    font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+    background-color: var(--background-color);
     line-height: 1.6;
-    color: #343a40; /* Dark text color for better readability */
+    color: var(--text-color);
 }
 
-/* Header styles */
+/* Header Styles */
 .header {
-    background-color: #007bff; /* Blue color for header */
-    color: #fff;
-    padding: 10px 20px;
+    background-color: var(--header-footer-color);
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Ensures header stays above other elements */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .navbar-brand img {
-    max-height: 50px; /* Adjust logo size */
+    max-height: 50px;
 }
 
 .navbar-nav {
@@ -39,13 +46,13 @@ body {
 }
 
 .navbar-nav .nav-link {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #fff;
     transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #ffd358;
+    color: var(--primary-color);
 }
 
 #search-form {
@@ -55,15 +62,15 @@ body {
 
 #search-form input[type="search"] {
     font-size: 1rem;
-    border-radius: 20px; /* Rounded corners for search field */
+    border-radius: 20px;
     padding: 5px 10px;
     border: 1px solid #fff;
 }
 
 #search-form button {
-    border-radius: 20px; /* Rounded corners for button */
+    border-radius: 20px;
     background-color: #fff;
-    color: #007bff;
+    color: var(--primary-color);
     border: none;
     padding: 5px 15px;
     cursor: pointer;
@@ -76,13 +83,30 @@ body {
 
 /* Hero Section */
 .hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover; /* Add your background image */
+    background: url('new-hero-bg.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+.hero h1, .hero p, .hero .btn {
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
@@ -96,44 +120,48 @@ body {
 }
 
 .hero .btn {
-    padding: 10px 20px;
-    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px 30px;
     border-radius: 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
 }
 
-/* Main container styles */
+.hero .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Main Content */
 .container {
-    margin-top: 120px; /* Space for fixed header */
+    max-width: 1140px;
+    margin: 0 auto;
     padding: 20px;
+    margin-top: 120px; /* Space for fixed header */
 }
 
 h1, h2 {
-    color: #007bff; /* Consistent heading color */
+    color: var(--primary-color);
 }
 
 img, video {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%; /* Ensure image/video doesn't exceed container width */
-    border-radius: 8px; /* Rounded corners for media */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for media */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer styles */
+/* Footer */
 .footer {
-    background-color: #007bff; /* Blue color for footer */
+    background-color: var(--header-footer-color);
     color: #fff;
     padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    flex-wrap: wrap; /* For better responsiveness on smaller screens */
 }
 
-.footer-left,
-.footer-right {
+.footer-left, .footer-right {
     flex: 1;
     padding: 10px;
 }
@@ -158,80 +186,47 @@ img, video {
 }
 
 .footer .social-links a:hover {
-    color: #ffd358;
+    color: var(--primary-color);
 }
 
-/* Tabs */
-.tabs .btn {
-    border-radius: 20px;
-}
-
-.tab-content {
-    display: none;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-/* Testimonials */
-.testimonials {
-    background: #f8f9fa;
-    padding: 50px 20px;
-}
-
-.testimonials .testimonial {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.testimonials .testimonial h3 {
-    color: #007bff;
+/* Forms and Buttons */
+input, textarea {
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
     margin-bottom: 10px;
 }
 
-.testimonials .testimonial p {
-    font-style: italic;
-    color: #6c757d;
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
 }
 
-/* CTA Section */
-.cta {
-    background: #007bff;
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.cta h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.cta .btn {
+.btn {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 25px;
     padding: 10px 20px;
-    font-size: 1.2rem;
-    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Responsive adjustments */
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive Adjustments */
 @media (max-width: 767px) {
     .footer {
         flex-direction: column;
         align-items: center;
     }
-    .footer-left,
-    .footer-right {
-        text-align: center;
-    }
-}
 
-@media (min-width: 576px) {
-    .navbar-nav .nav-link {
-        font-size: 1.1rem;
+    .footer-left, .footer-right {
+        text-align: center;
     }
 }
 
