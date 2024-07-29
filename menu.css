@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f8f9fa; /* Light background color */
     line-height: 1.6;
     color: #343a40; /* Dark text color for better readability */
@@ -79,57 +79,6 @@ body {
     color: #0056b3;
 }
 
-/* Hero section */
-.hero {
-    background: url('path/to/your/image.jpg') no-repeat center center/cover;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    padding: 0 20px;
-    position: relative;
-    z-index: 1;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    z-index: -1;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin: 0;
-    line-height: 1.2;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin: 20px 0;
-}
-
-.hero .btn {
-    background-color: #ffd358;
-    color: #343a40;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.hero .btn:hover {
-    background-color: #ffce44;
-    color: #212529;
-}
-
 /* Main container styles */
 .container {
     margin-top: 120px; /* Space for fixed header */
@@ -139,93 +88,17 @@ body {
     margin-right: auto;
 }
 
-/* Features section */
-.features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: center;
-    padding: 40px 0;
+.container h1, .container h2 {
+    color: #007bff;
 }
 
-.feature {
-    flex: 1 1 30%;
-    margin: 10px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
-    transition: transform 0.3s;
-}
-
-.feature:hover {
-    transform: translateY(-10px);
-}
-
-.feature img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.feature h3 {
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
-
-.feature p {
-    font-size: 1rem;
-}
-
-/* Testimonials section */
-.testimonials {
-    background-color: #f8f9fa;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.testimonial {
-    margin: 20px 0;
-}
-
-.testimonial p {
-    font-size: 1.2rem;
-    font-style: italic;
-}
-
-.testimonial .author {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-/* Call to Action section */
-.cta {
-    background-color: #007bff;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    border-radius: 8px;
-    margin: 40px 0;
-}
-
-.cta h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.cta .btn {
-    background-color: #ffd358;
-    color: #343a40;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.cta .btn:hover {
-    background-color: #ffce44;
-    color: #212529;
+/* Image styles */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Ensures image doesn't exceed container width */
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for images */
 }
 
 /* Footer styles */
